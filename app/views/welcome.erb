@@ -1,1 +1,8 @@
 Welcome to my site!
+
+<% @products.each do |product| %>
+  <p>
+    <%= product.name %>
+  </p>
+
+<% end %>
