@@ -6,6 +6,7 @@ When(/^I visit the site$/) do
   visit '/'
 end
 
-Then(/^I would like to see "([^"]*)"$/) do |text|
-  expect(page).to have_content text
+Then(/^I would like to see "([^"]*)" with a price of "([^"]*)" kr$/) do |product_name, price|
+  expected_output = "#{product_name} - #{price}"
+  expect(page).to have_content expected_output
 end

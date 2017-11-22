@@ -2,7 +2,7 @@ Welcome to my site!
 
 <% @products.each do |product| %>
   <p>
-    <%= product.name %>
+    <%= "#{product.name} - #{product.price} kr" %>
   </p>
 
 <% end %>
