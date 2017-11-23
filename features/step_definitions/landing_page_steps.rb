@@ -12,5 +12,6 @@ Then(/^I would like to see "([^"]*)" with a price of "([^"]*)" kr$/) do |product
 end
 
 Then(/^I would like to see "([^"]*)"$/) do |description|
-  expect(page).to have_content products.description
+  expected_output = "#{description}"
+  expect(page).to have_content expected_output
 end
