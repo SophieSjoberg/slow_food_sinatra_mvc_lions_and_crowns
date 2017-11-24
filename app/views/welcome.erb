@@ -3,6 +3,7 @@ Welcome to my site!
   <section id="<%= category.titleize.gsub(' ', '').underscore %>">
     <% @products.each do |product| %>
       <% if product.category == category %>
+      <%= "#{category}" %>
         <h1>
           <%= "#{product.name} - #{product.price} kr" %>
         </h1>
