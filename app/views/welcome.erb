@@ -1,12 +1,14 @@
 Welcome to my site!
 <% @categories.each do |category| %>
   <section id="<%= category.titleize.gsub(' ', '').underscore %>">
+    <h1>
+      <%= "#{category.pluralize}" %>
+    </h1>
     <% @products.each do |product| %>
       <% if product.category == category %>
-      <%= "#{category}" %>
-        <h1>
+        <h3>
           <%= "#{product.name} - #{product.price} kr" %>
-        </h1>
+        </h3>
         <p>
           <%= product.description %>
         </p>
