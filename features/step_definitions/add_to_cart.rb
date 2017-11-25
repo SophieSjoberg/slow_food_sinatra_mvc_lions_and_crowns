@@ -24,5 +24,5 @@ Then(/^the order should contain "([^"]*)"$/) do |product_name|
 end
 
 Then(/^I should see "([^"]*)"$/) do |text|
-expect(page).to have_content text
+  expect(page).to have_content text
 end
