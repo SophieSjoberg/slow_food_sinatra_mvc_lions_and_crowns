@@ -19,4 +19,11 @@ Background:
     Then there should be an order created for me
     And the order should contain "Pizza"
     And I should see "Pizza was added to your order"
-    And show me the page
+
+  Scenario: User can add a second product to the order
+    Given I visit the site
+    Given there is an order with order item "Apple Pie"
+    And I click "Order" on "Hamburger"
+    Then I should see "Hamburger was added to your order"
+    And the order should contain "Hamburger"
+    And the order should contain "Apple Pie"
