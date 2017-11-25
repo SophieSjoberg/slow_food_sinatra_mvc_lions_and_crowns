@@ -15,7 +15,6 @@ Feature: List dishes on landing page
 
   Scenario: Visitor sees list of dishes on page
     When I visit the site
-    And show me the page
     Then I would like to see "Chicken Wings" with a price of "60" kr
     And I would like to see "Great Chicken Wings"
     And I would like to see "Nachos" with a price of "60" kr
