@@ -27,4 +27,4 @@ Feature: Display categories in menu
     And I should not see "Hamburger" in the "Starter" section
     And I should not see "Ice Cream" in the "Main Course" section
     And I should not see "Chicken Wings" in the "Dessert" section
-    Then show me the page
+    

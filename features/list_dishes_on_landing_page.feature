@@ -23,4 +23,3 @@ Feature: List dishes on landing page
     And I would like to see "Great Apple Pie"
     And I would like to see "Cheese Cake" with a price of "60" kr
     And I would like to see "Great Cheese Cake"
-    Then show me the page

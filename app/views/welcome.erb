@@ -2,7 +2,7 @@ Welcome to my site!
 <% @categories.each do |category| %>
   <section id="<%= category.titleize.gsub(' ', '').underscore %>">
     <h1>
-      <%= "#{category.pluralize}" %>
+      <%= category.pluralize %>
     </h1>
     <% @products.each do |product| %>
       <% if product.category == category %>
