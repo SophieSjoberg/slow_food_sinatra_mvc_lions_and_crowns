@@ -6,13 +6,19 @@ Welcome to my site!
     </h1>
     <% @products.each do |product| %>
       <% if product.category == category %>
+      <div id="product-<%= product.id %>">
         <h3>
           <%= "#{product.name} - #{product.price} kr" %>
         </h3>
         <p>
           <%= product.description %>
         </p>
+        <form action="/order.create" method="post">
+          <input type="hidden" name="product_id" value="<%= product.id %>">
+          <input type="submit" value="Order">
+        </form>
+
       <% end %>
     <% end %>
-  </section>
+  </section> 
 <% end %>
