@@ -19,3 +19,4 @@ Background:
     Then there should be an order created for me
     And the order should contain "Pizza"
     And I should see "Pizza was added to your order"
+    And show me the page

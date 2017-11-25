@@ -1,6 +1,7 @@
 Given(/^I click "([^"]*)" on "([^"]*)"$/) do |element, product_name|
   @product = Product.find_by(name: product_name)
   within("#product-#{@product.id}") do
+    #binding.pry
     click_link_or_button element
   end
 end
