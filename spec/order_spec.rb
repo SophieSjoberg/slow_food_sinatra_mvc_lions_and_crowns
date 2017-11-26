@@ -11,6 +11,10 @@ describe Order do
     it {is_expected.to have_many :order_items}
   end
 
+  describe 'validations' do
+    it {is_expected.to validate_inclusion_of(:status).in_array(Order::VALID_STATUS)}
+  end
+
 
 
     describe '#total' do
