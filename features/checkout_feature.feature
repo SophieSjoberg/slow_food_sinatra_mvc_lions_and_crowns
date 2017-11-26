@@ -1,7 +1,7 @@
-Feature: Customer with order can checkout
-  As a customer
+Feature: User with order can checkout
+  As a visitor
   In order to get the food I ordered
-  I would like to be able to finalize my order(checkout)
+  I would like to be able to finalize my order (checkout)
 
   Background:
     Given the following products exist
@@ -13,17 +13,18 @@ Feature: Customer with order can checkout
     And the time is "12:00"
 
     And I visit the site
-    And there is an order with order item "Pizza"
     And there is an order with order item "Nachos"
+    And there is an order with order item "Pizza"
+
 
   Scenario Outline: User can see checkout
     And I click "Checkout"
     Then I should be on the checkout page
-    And I should see <product> and <price> in the order
+    Then I should see <product> and <price> in the order
     And I should see "Order total: 165 kr"
     And I should see "Estimated pickup time: 12:30"
 
     Examples:
-      | name   | price |
-      | Pizza  | 105   |
-      | Nachos | 60    | 
+      | product | price |
+      | Nachos  | 60    |
+      | Pizza   | 105   |

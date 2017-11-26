@@ -10,9 +10,9 @@ Then(/^I should be on the checkout page$/) do
   expect(current_path).to eq '/checkout'
 end
 
-Then(/^I should see <product> and (\d+) in the order$/) do |product_name, price|
+Then(/^I should see (.*) and (.*) in the order$/) do |product_name, price|
   expected_output = "#{product_name} - #{price} kr"
-  within '#order-details' do
+  within '#order-item' do
     expect(page).to have_content expected_output
   end
 end
