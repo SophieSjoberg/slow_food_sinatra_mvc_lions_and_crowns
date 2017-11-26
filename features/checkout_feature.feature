@@ -34,9 +34,3 @@ Feature: User with order can checkout
     And I click "Confirm Order"
     Then I should see "Your checkout is confirmed. Thank you come again!"
     And I should see "Pickup time: 12:30"
-
-  Scenario: Not logged in user can not confirm his checkout
-    Given I am logged out
-    And I click "Checkout"
-    And I click "Confirm order"
-    Then I should see "You need to login before confirming your checkout"
