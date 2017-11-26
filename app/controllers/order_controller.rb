@@ -12,3 +12,8 @@ class SlowFoodApp
     redirect '/'
   end
 end
+
+get '/checkout' do
+    @order = order
+    erb :checkout
+end
