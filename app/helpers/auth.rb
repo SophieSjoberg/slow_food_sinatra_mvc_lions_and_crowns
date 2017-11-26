@@ -5,3 +5,9 @@ def current_user
     return nil
   end
 end
+
+def order
+  if session[:order_id]
+    Order.find(session[:order_id])
+  end
+end
