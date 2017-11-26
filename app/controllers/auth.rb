@@ -30,7 +30,4 @@ class SlowFoodApp
     erb :users_index
   end
 
-  get '/checkout' do
-    erb :checkout
-  end
 end
