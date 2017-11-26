@@ -10,8 +10,10 @@ Feature: Registration page
     And I fill in "Password Confirmation" with "whatever"
     When I press the "Sign up" button
     Then I would like my user "Alfred" to be saved in the database
-    And I get a message saying "Your user has been created"
     And I would like to be redirected to the home page
+    And I get a message saying "Your user has been created"
+    And I should see "Logged in as: Alfred"
+
 
   Scenario: Visitor gets error message when not filling in password
     Given I visit the register page
