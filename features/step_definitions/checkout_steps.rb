@@ -16,3 +16,7 @@ Then(/^I should see (.*) and (.*) in the order$/) do |product_name, price|
     expect(page).to have_content expected_output
     end
 end
+
+Given(/^I am logged out$/) do
+  session[:user_id] = nil
+end
