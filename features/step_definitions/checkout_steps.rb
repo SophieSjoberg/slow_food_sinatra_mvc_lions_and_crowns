@@ -14,7 +14,7 @@ Then(/^I should see (.*) and (.*) in the order$/) do |product_name, price|
   expected_output = "#{product_name} - #{price} kr"
     within '#order-details' do
     expect(page).to have_content expected_output
-    end
+  end
 end
 
 Given(/^I am logged out$/) do
