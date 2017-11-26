@@ -11,9 +11,9 @@ class SlowFoodApp
     flash[:order] = "#{order_item.product.name} was added to your order"
     redirect '/'
   end
-end
 
-get '/checkout' do
-    @order = order
-    erb :checkout
+    get '/checkout' do
+      @order = order
+      erb :checkout
+    end
 end
