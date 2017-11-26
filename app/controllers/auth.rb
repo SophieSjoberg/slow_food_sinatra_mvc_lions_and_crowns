@@ -49,4 +49,5 @@ class SlowFoodApp
     @users = User.all
     erb :users_index
   end
+
 end

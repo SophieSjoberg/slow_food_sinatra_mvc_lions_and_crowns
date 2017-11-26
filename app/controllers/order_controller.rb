@@ -11,4 +11,18 @@ class SlowFoodApp
     flash[:order] = "#{order_item.product.name} was added to your order"
     redirect '/'
   end
+
+  get '/checkout' do
+    @order = order
+    erb :checkout
+  end
+
+  post '/confirm_checkout' do
+    order.update_attribute(:status, 'confirmed')
+    @pickup_time = pickup_time
+    session[:order_id] = nil
+    erb :checkout_confirmed
+  end
+
+
 end

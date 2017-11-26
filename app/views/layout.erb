@@ -32,6 +32,11 @@
         <a href="/signup">Sign Up</a>
       <% end %>
   </header>
+
+  <% if order %>
+    <a href="/checkout">Checkout</a>
+  <% end %>
+
   <% flash.keys.each do |type| %>
     <div>
       <%= flash[type] %>
