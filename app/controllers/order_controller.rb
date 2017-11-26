@@ -12,8 +12,14 @@ class SlowFoodApp
     redirect '/'
   end
 
-    get '/checkout' do
-      @order = order
-      erb :checkout
-    end
+  get '/checkout' do
+    @order = order
+    erb :checkout
+  end
+
+  post '/confirm_checkout' do
+    order.update_attributes(status: 'confirmed')
+    session[:order_id] = nil
+    erb :checkout_confirmed
+  end
 end

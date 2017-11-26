@@ -28,3 +28,9 @@ Feature: User with order can checkout
       | name    | price |
       | Nachos  | 60    |
       | Pizza   | 105   |
+
+  Scenario: User can confirm his checkout
+    And I click "Checkout"
+    And I click "Confirm Order"
+    Then I should see "Your checkout is confirmed. Thank you come again!"
+    And I should see "Pickup time: 12:30"
