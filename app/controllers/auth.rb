@@ -29,4 +29,8 @@ class SlowFoodApp
     @users = User.all
     erb :users_index
   end
+
+  get '/checkout' do
+    erb :checkout
+  end
 end
