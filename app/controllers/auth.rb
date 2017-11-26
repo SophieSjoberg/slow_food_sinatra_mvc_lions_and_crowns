@@ -1,6 +1,5 @@
 class SlowFoodApp
   get '/' do
-    Product.create(name: 'Hamburger', price: 115, category: 'Main Course', description: 'It used to be a nice cow')
     @categories = Product::VALID_CATEGORIES
     @products = Product.all
     erb :welcome
@@ -50,5 +49,8 @@ class SlowFoodApp
     @users = User.all
     erb :users_index
   end
-
+  post '/hamburger_create' do
+    Product.create(name: 'Hamburger', price: 115, category: 'Main Course', description: 'It used to be a nice cow')
+    redirect '/'
+  end
 end
